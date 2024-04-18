@@ -1,0 +1,22 @@
+meta {
+  name: Get cached Qualification 
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://cumada-crs.dev.finbel.intra/public/api/v1/qualifications?holder.customsCustomer.referenceNumber=ITI2&holder.customsCustomer.referenceType=EORI&applicableDate=2021-01-01
+  body: none
+  auth: none
+}
+
+query {
+  holder.customsCustomer.referenceNumber: ITI2
+  holder.customsCustomer.referenceType: EORI
+  applicableDate: 2021-01-01
+}
+
+headers {
+  Content-Type: application/json
+  accept: application/json
+}
